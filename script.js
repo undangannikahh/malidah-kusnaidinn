@@ -124,6 +124,9 @@ function openInvitation() {
         musicCtrl.style.display = 'block'; // Tombolnya muncul di sini
         musicCtrl.style.animationPlayState = 'running'; // Animasinya muter
     }).catch(error => console.log("Auto-play prevented by browser"));
+
+    // Tampilkan tombol auto-scroll
+    document.getElementById('autoscroll-control').style.display = 'block';
 }
 
 function toggleMusic() {
@@ -138,6 +141,34 @@ function toggleMusic() {
     }
     isPlaying = !isPlaying;
 }
+
+// --- FUNGSI AUTO SCROLL ---
+let isAutoScrolling = false;
+let autoScrollInterval;
+
+function toggleAutoScroll() {
+    const btn = document.getElementById('autoscroll-control');
+    
+    if (isAutoScrolling) {
+        clearInterval(autoScrollInterval);
+        btn.innerHTML = '<i class="fas fa-arrow-down"></i>';
+        btn.style.background = 'var(--c-gold)';
+    } else {
+        autoScrollInterval = setInterval(() => {
+            window.scrollBy(0, 1);
+        }, 20); // Kecepatan scroll (makin kecil makin cepet)
+        btn.innerHTML = '<i class="fas fa-pause"></i>';
+        btn.style.background = 'var(--c-gold-hover)';
+    }
+    isAutoScrolling = !isAutoScrolling;
+}
+
+// Hentikan auto-scroll kalau tamu scroll layarnya secara manual
+['wheel', 'touchmove'].forEach(evt => {
+    window.addEventListener(evt, () => {
+        if(isAutoScrolling) toggleAutoScroll();
+    }, { passive: true });
+});
 
 // --- FUNGSI LIGHTBOX GALLERY ---
 const lightbox = document.getElementById('lightbox');
