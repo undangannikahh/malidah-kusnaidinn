@@ -54,26 +54,26 @@ document.addEventListener('DOMContentLoaded', () => {
         let scrollLeft;
 
         galleryScroll.addEventListener('mousedown', (e) => {
-            isDown = true;
-            galleryScroll.style.cursor = 'grabbing';
-            startX = e.pageX - galleryScroll.offsetLeft;
-            scrollLeft = galleryScroll.scrollLeft;
-        });
-        galleryScroll.addEventListener('mouseleave', () => {
-            isDown = false;
-            galleryScroll.style.cursor = 'grab';
-        });
-        galleryScroll.addEventListener('mouseup', () => {
-            isDown = false;
-            galleryScroll.style.cursor = 'grab';
-        });
-        galleryScroll.addEventListener('mousemove', (e) => {
-            if (!isDown) return;
-            e.preventDefault(); 
-            const x = e.pageX - galleryScroll.offsetLeft;
-            const walk = (x - startX) * 2; 
-            galleryScroll.scrollLeft = scrollLeft - walk;
-        });
+        isDown = true;
+        galleryScroll.classList.add('is-dragging'); // Matikan snap CSS
+        startX = e.pageX - galleryScroll.offsetLeft;
+        scrollLeft = galleryScroll.scrollLeft;
+    });
+    galleryScroll.addEventListener('mouseleave', () => {
+        isDown = false;
+        galleryScroll.classList.remove('is-dragging'); // Nyalakan lagi snap CSS
+    });
+    galleryScroll.addEventListener('mouseup', () => {
+        isDown = false;
+        galleryScroll.classList.remove('is-dragging'); // Nyalakan lagi snap CSS
+    });
+    galleryScroll.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault(); 
+        const x = e.pageX - galleryScroll.offsetLeft;
+        const walk = (x - startX) * 2; 
+        galleryScroll.scrollLeft = scrollLeft - walk;
+    });
     }
 });
 
