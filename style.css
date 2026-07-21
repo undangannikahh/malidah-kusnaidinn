@@ -350,7 +350,7 @@ p { line-height: 1.6; font-size: 0.95rem; }
 @keyframes spin { 100% { transform: rotate(360deg); } }
 
 /* Footer */
-.footer { background: var(--c-brown); color: var(--c-ivory); padding: 4rem 1.5rem 2rem !important; }
+.footer { background: var(--c-brown); color: var(--c-ivory); padding: 4rem 1.5rem; }
 .footer .thank-you { font-family: var(--f-script); font-size: clamp(2.5rem, 8vw, 3rem); color: var(--c-gold); margin: 1.5rem 0 1rem; }
 .footer .title { color: var(--c-white); font-size: 1.5rem; margin-bottom: 10px; }
 .footer .family-name {font-size: 0.85rem; color: var(--c-beige);}
