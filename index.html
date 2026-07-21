@@ -14,13 +14,9 @@
 </head>
 <body class="locked">
 
-    <!-- Container untuk efek kelopak bunga -->
     <div id="particles-container"></div>
-
-    <!-- DEKORASI BERGERAK (Burung Merpati Terbang) -->
     <div id="moving-decor"><i class="fas fa-dove"></i></div>
 
-    <!-- Audio Player -->
     <audio id="bg-music" loop>
         <source src="Wedding Nasheed - Muhammad Al Muqit  Lyrics Arabic + Terjemahan _ 𝘈𝘳𝘢𝘣𝘪𝘤 𝘕𝘢𝘴𝘩𝘦𝘦𝘥  محمد المقيط - Laa.mp3" type="audio/mpeg">
     </audio>
@@ -28,7 +24,6 @@
         <i class="fas fa-music"></i>
     </button>
 
-    <!-- TOMBOL AUTO SCROLL (BARU) -->
     <button id="autoscroll-control" onclick="toggleAutoScroll()">
         <i class="fas fa-play"></i> Auto Scroll
     </button>
@@ -41,7 +36,7 @@
             <h1 class="title">Malidah & Kusnaidin</h1>
             <p class="date">Minggu, 26 Juli 2026</p>
             
-            <div class="guest-info">
+            <div class="guest-info glass-panel">
                 <p>Kepada Yth. Bapak/Ibu/Saudara/i:</p>
                 <h3 id="guest-name">Tamu Undangan</h3>
                 <p class="small-text">Mohon maaf bila ada kesalahan penulisan nama/gelar</p>
@@ -59,46 +54,45 @@
 
     <!-- Main Content -->
     <main id="main-content">
-        <!-- 2. Hero Section (Sekarang ada efek scroll) -->
-        <section class="hero slide-up">
+        <!-- 2. Hero Section -->
+        <section class="hero ">
             <div class="hero-text text-center">
-                <p class="bismillah">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم</p>
-                <p class="quran-verse">"Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu pasangan hidup dari jenismu sendiri, supaya kamu cenderung dan merasa tenteram kepadanya, dan dijadikan-Nya di antaramu rasa kasih dan sayang..."<br><strong>(QS. Ar-Rum: 21)</strong></p>
+                <p class="bismillah anim anim-fade">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم</p>
+                <p class="quran-verse anim anim-up">"Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu pasangan hidup dari jenismu sendiri, supaya kamu cenderung dan merasa tenteram kepadanya, dan dijadikan-Nya di antaramu rasa kasih dan sayang..."<br><strong>(QS. Ar-Rum: 21)</strong></p>
                 
-                <!-- Indikator Scroll -->
-                <div class="scroll-indicator">
+                <div class="scroll-indicator anim anim-fade">
                     <p>Scroll ke Bawah</p>
                     <i class="fas fa-chevron-down"></i>
                 </div>
             </div>
         </section>
 
-        <!-- 3. Profil Mempelai (Hapus slide-up di section ini) -->
-        <section class="profiles relative-section slide-up">
+        <!-- 3. Profil Mempelai -->
+        <section class="profiles relative-section">
             <div class="container text-center relative-z">
-                <h2 class="section-title slide-up">Sang Mempelai</h2>
+                <h2 class="section-title anim anim-fade">Sang Mempelai</h2>
                 <div class="couple-grid">
                     
-                    <!-- Mempelai Pria (Tambah slide-up di sini) -->
-                    <div class="profile-card slide-up">
-                        <div class="photo-frame-ornate">
-                            <img src="mempelailk.jpeg" class="portrait-img" alt="Aslam">
+                    <!-- Mempelai Pria -->
+                    <div class="profile-card anim anim-left glass-panel">
+                        <div class="photo-frame-ornate anim anim-zoom">
+                            <img src="mempelailk.jpeg" class="portrait-img" alt="Kusnaidin">
                         </div>
-                        <h3 class="name-script slide-up">Kusnaidin, S.Ap</h3>
-                        <p class="parents slide-up">Putra Terakhir dari Bapak Kamaludin & Ibu Kalisom (Almarhumah)</p>
-                        <a href="https://www.instagram.com/kusnaidinap?igsh=ZnIwdmFsbGNqdW52" target="_blank" class="ig-link slide-up">
+                        <h3 class="name-script anim anim-up">Kusnaidin, S.Ap</h3>
+                        <p class="parents anim anim-up">Putra Terakhir dari Bapak Kamaludin & Ibu Kalisom (Almarhumah)</p>
+                        <a href="https://www.instagram.com/kusnaidinap?igsh=ZnIwdmFsbGNqdW52" target="_blank" class="ig-link anim anim-zoom">
                             <i class="fab fa-instagram"></i> @kusnaidinap
                         </a>
                     </div>
 
-                    <!-- Mempelai Wanita (Tambah slide-up di sini) -->
-                    <div class="profile-card slide-up">
-                        <div class="photo-frame-ornate">
-                            <img src="WhatsApp Image 2026-07-21 at 19.46.44.jpeg" class="portrait-img" alt="Bride">
+                    <!-- Mempelai Wanita -->
+                    <div class="profile-card anim anim-right glass-panel">
+                        <div class="photo-frame-ornate anim anim-zoom">
+                            <img src="WhatsApp Image 2026-07-21 at 19.46.44.jpeg" class="portrait-img" alt="Malidah">
                         </div>
-                        <h3 class="name-script slide-up">Malidah, S.Pd</h3>
-                        <p class="parents slide-up">Putri ke empat dari Bpk. Ahamid (Almarhum) & Ibu Murni</p>
-                        <a href="https://www.instagram.com/idha.ma?igsh=MWl2aWhpd205aWsyMw==" target="_blank" class="ig-link slide-up">
+                        <h3 class="name-script anim anim-up">Malidah, S.Pd</h3>
+                        <p class="parents anim anim-up">Putri ke empat dari Bpk. Ahamid (Almarhum) & Ibu Murni</p>
+                        <a href="https://www.instagram.com/idha.ma?igsh=MWl2aWhpd205aWsyMw==" target="_blank" class="ig-link anim anim-zoom">
                             <i class="fab fa-instagram"></i> @idha.ma
                         </a>
                     </div>
@@ -106,42 +100,43 @@
                 </div>
             </div>
         </section>
+
         <!-- 4. Countdown -->
-        <section class="countdown-section slide-up">
+        <section class="countdown-section">
             <div class="container text-center">
-                <h2 class="section-title slide-up">Menuju Hari Bahagia</h2>
+                <h2 class="section-title anim anim-fade">Menuju Hari Bahagia</h2>
                 <div id="countdown" class="countdown-grid">
-                    <div class="time-box slide-up"><span id="days">00</span><p>Hari</p></div>
-                    <div class="time-box slide-up"><span id="hours">00</span><p>Jam</p></div>
-                    <div class="time-box slide-up"><span id="minutes">00</span><p>Menit</p></div>
-                    <div class="time-box slide-up"><span id="seconds">00</span><p>Detik</p></div>
+                    <div class="time-box anim anim-zoom glass-panel"><span id="days">00</span><p>Hari</p></div>
+                    <div class="time-box anim anim-zoom glass-panel"><span id="hours">00</span><p>Jam</p></div>
+                    <div class="time-box anim anim-zoom glass-panel"><span id="minutes">00</span><p>Menit</p></div>
+                    <div class="time-box anim anim-zoom glass-panel"><span id="seconds">00</span><p>Detik</p></div>
                 </div>
             </div>
         </section>
 
-        <!-- 5. Detail Acara (Hapus slide-up di section ini) -->
+        <!-- 5. Detail Acara -->
         <section class="events relative-section">
             <div class="container relative-z">
-                <h2 class="section-title text-center slide-up">Rangkaian Acara</h2>
+                <h2 class="section-title text-center anim anim-fade">Rangkaian Acara</h2>
                 <div class="event-grid">
-                    <!-- Card Akad (Tambah slide-up di sini) -->
-                    <div class="event-card slide-up">
-                        <i class="fas fa-ring event-icon slide-up"></i>
-                        <h3 class="event-judul slide-up">Akad Nikah</h3>
-                        <p class="event-date slide-up">Minggu, 26 Juli 2026</p>
-                        <p class="event-time slide-up">10:00 WITA - Selesai</p>
-                        <p class="event-location slide-up">Kediaman Mempelai Wanita<br>Dusun Saba RT. 005 RW. 003 Desa Sampungu Kec. Soromandi Kab. Bima</p>
-                        <a href="https://maps.google.com" target="_blank" class="btn-outline-gold slide-up">Lihat Lokasi</a>
+                    <!-- Card Akad -->
+                    <div class="event-card anim anim-left glass-panel">
+                        <i class="fas fa-ring event-icon anim anim-zoom"></i>
+                        <h3 class="event-judul anim anim-up">Akad Nikah</h3>
+                        <p class="event-date anim anim-up">Minggu, 26 Juli 2026</p>
+                        <p class="event-time anim anim-up">10:00 WITA - Selesai</p>
+                        <p class="event-location anim anim-up">Kediaman Mempelai Wanita<br>Dusun Saba RT. 005 RW. 003 Desa Sampungu Kec. Soromandi Kab. Bima</p>
+                        <a href="https://maps.google.com" target="_blank" class="btn-outline-gold anim anim-up">Lihat Lokasi</a>
                     </div>
-                    <!-- Card Resepsi (Tambah slide-up di sini) -->
-                    <div class="event-card slide-up">
-                        <i class="fas fa-glass-cheers event-icon slide-up"></i>
-                        <h3 class="slide-up">Resepsi</h3>
-                        <p class="event-date slide-up">Minggu, 26 Juli 2026</p>
-                        <p class="event-time slide-up">15:00 WITA - Selesai</p>
-                        <p class="event-location slide-up">Lapangan Sepak Bola Saba<br>Desa Sampungu Kec. Soromandi Kab. Bima</p>
-                        <a href="https://maps.google.com" target="_blank" class="btn-outline-gold slide-up">Lihat Lokasi</a>
-                        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Akad+Nikah+Malidah+%26+Kusnaidin&dates=20260726T020000Z/20260726T040000Z&details=Kehadiran+Anda+adalah+doa+restu+bagi+kami.&location=Kediaman+Mempelai+Wanita" target="_blank" class="btn-gold slide-up" style="margin-bottom: 5px; margin-top: 1.4rem; display: inline-block; width: 100%;">
+                    <!-- Card Resepsi -->
+                    <div class="event-card anim anim-right glass-panel">
+                        <i class="fas fa-glass-cheers event-icon anim anim-zoom"></i>
+                        <h3 class="anim anim-up">Resepsi</h3>
+                        <p class="event-date anim anim-up">Minggu, 26 Juli 2026</p>
+                        <p class="event-time anim anim-up">15:00 WITA - Selesai</p>
+                        <p class="event-location anim anim-up">Lapangan Sepak Bola Saba<br>Desa Sampungu Kec. Soromandi Kab. Bima</p>
+                        <a href="https://maps.google.com" target="_blank" class="btn-outline-gold anim anim-up">Lihat Lokasi</a>
+                        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Akad+Nikah+Malidah+%26+Kusnaidin&dates=20260726T020000Z/20260726T040000Z&details=Kehadiran+Anda+adalah+doa+restu+bagi+kami.&location=Kediaman+Mempelai+Wanita" target="_blank" class="btn-gold anim anim-up" style="margin-bottom: 5px; margin-top: 1.4rem; display: inline-block; width: 100%;">
                             <i class="far fa-calendar-alt "></i> Simpan ke Kalender
                         </a>
                     </div>
@@ -150,125 +145,123 @@
         </section>
 
         <!-- 6. Galeri Foto -->
-        <section class="gallery slide-up">
+        <section class="gallery">
             <div class="container">
-                <h2 class="section-title text-center slide-up">Momen Berharga</h2>
-                
-                <!-- Diubah menjadi gallery-scroll untuk efek geser ke samping -->
-                <div class="gallery-scroll">
-                    <!-- Foto 1 -->
-                    <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=500&auto=format&fit=crop')">
-                        <img src="gallery (1).jpeg" alt="Prewedding 1">
-                        <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
+                <h2 class="section-title text-center anim anim-fade">Momen Berharga</h2>
+                    <div class="gallery-scroll anim anim-up">
+                        <!-- Foto 1 -->
+                        <div class="gallery-item" onclick="openLightbox('gallery (1).jpeg')">
+                            <img src="gallery (1).jpeg" alt="Galeri 1" loading="lazy">
+                            <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
+                        </div>
+                        <!-- Foto 2 -->
+                        <div class="gallery-item" onclick="openLightbox('gallery (2).jpeg')">
+                            <img src="gallery (2).jpeg" alt="Galeri 2" loading="lazy">
+                            <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
+                        </div>
+                        <!-- Foto 3 -->
+                        <div class="gallery-item" onclick="openLightbox('gallery (3).jpeg')">
+                            <img src="gallery (3).jpeg" alt="Galeri 3" loading="lazy">
+                            <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
+                        </div>
+                        <!-- Foto 4 -->
+                        <div class="gallery-item" onclick="openLightbox('gallery (4).jpeg')">
+                            <img src="gallery (4).jpeg" alt="Galeri 4" loading="lazy">
+                            <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
+                        </div>
+                        <!-- Foto 5 -->
+                        <div class="gallery-item" onclick="openLightbox('gallery (5).jpeg')">
+                            <img src="gallery (5).jpeg" alt="Galeri 5" loading="lazy">
+                            <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
+                        </div>
+                        <!-- Foto 6 -->
+                        <div class="gallery-item" onclick="openLightbox('gallery (6).jpeg')">
+                            <img src="gallery (6).jpeg" alt="Galeri 6" loading="lazy">
+                            <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
+                        </div>
+                        <!-- Foto 7 (Tambahan) -->
+                        <div class="gallery-item" onclick="openLightbox('gallery (7).jpeg')">
+                            <img src="gallery (7).jpeg" alt="Galeri 7" loading="lazy">
+                            <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
+                        </div>
+                        <!-- Foto 8 (Tambahan) -->
+                        <div class="gallery-item" onclick="openLightbox('gallery (8).jpeg')">
+                            <img src="gallery (8).jpeg" alt="Galeri 8" loading="lazy">
+                            <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
+                        </div>
+                        <!-- Foto 9 (Tambahan) -->
+                        <div class="gallery-item" onclick="openLightbox('gallery (9).jpeg')">
+                            <img src="gallery (9).jpeg" alt="Galeri 9" loading="lazy">
+                            <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
+                        </div>
                     </div>
-                    
-                    <!-- Foto 2 -->
-                    <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=500&auto=format&fit=crop')">
-                        <img src="gallery (2).jpeg" alt="Prewedding 1">
-                        <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
-                    </div>
-
-                    <!-- Foto 3 -->
-                    <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=500&auto=format&fit=crop')">
-                        <img src="gallery (3).jpeg" alt="Prewedding 1">
-                        <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
-                    </div>
-
-                    <!-- Foto 4 -->
-                    <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=500&auto=format&fit=crop')">
-                        <img src="gallery (4).jpeg" alt="Prewedding 1">
-                        <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
-                    </div>
-                    
-                    <!-- Foto 5 (Tambahan) -->
-                    <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=500&auto=format&fit=crop')">
-                        <img src="gallery (5).jpeg" alt="Prewedding 1">
-                        <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
-                    </div>
-                    
-                    <!-- Foto 6 (Tambahan) -->
-                    <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=500&auto=format&fit=crop')">
-                        <img src="gallery (6).jpeg" alt="Prewedding 1">
-                        <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
-                    </div>
-                </div>
             </div>
         </section>
 
-        <!-- Lightbox Modal -->
         <div id="lightbox" class="lightbox" onclick="closeLightbox()">
             <span class="close-lightbox">&times;</span>
             <img class="lightbox-content" id="lightbox-img">
         </div>
 
-        <!-- 7. Love Story -->
-        <section class="love-story slide-up">
+        <!-- 7. Love Story (Udah Diganti Horizontal Scroll & Glassmorphism) -->
+        <section class="love-story">
             <div class="container">
-                <h2 class="section-title text-center slide-up">Kisah Cinta</h2>
-                <div class="timeline slide-up">
-                    <div class="timeline-item slide-up">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <h4>Awal Pertemuan</h4>
-                            <p class="date">Agustus 2025</p>
-                            <p>Semua bermula dari sebuah sambungan telepon. Saat itu, jarak masih memisahkan karena ia tengah berada di tanah rantau. Sebuah panggilan singkat kepada keponakannya yang sedang menimba ilmu di Pondok Pesantren Al-Madinah, tanpa disangka menjadi jembatan takdir yang Allah siapkan untuk kami. Momen sederhana lewat suara itu menjadi awal dari kisah yang tak pernah kami rencanakan.</p>
-                        </div>
+                <h2 class="section-title text-center anim anim-fade">Kisah Cinta</h2>
+                
+                <div class="story-timeline anim anim-up">
+                    <div class="story-card glass-panel">
+                        <h4>Awal Pertemuan</h4>
+                        <p class="date">Agustus 2025</p>
+                        <p>Semua bermula dari sebuah sambungan telepon. Saat itu, jarak masih memisahkan karena ia tengah berada di tanah rantau. Sebuah panggilan singkat kepada keponakannya yang sedang menimba ilmu di Pondok Pesantren Al-Madinah, tanpa disangka menjadi jembatan takdir yang Allah siapkan untuk kami. Momen sederhana lewat suara itu menjadi awal dari kisah yang tak pernah kami rencanakan.</p>
                     </div>
-                    <div class="timeline-item slide-up">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <h4>Lamaran</h4>
-                            <p class="date">29 Juni 2026</p>
-                            <p>Seiring berjalannya waktu, perasaan dan keyakinan ini tumbuh semakin kuat. Dua hati yang awalnya asing, kini menyatu dalam niat suci untuk melangkah ke jenjang yang lebih serius. Dengan izin Allah SWT serta iringan doa dari keluarga, 29 Juni 2026 menjadi saksi keseriusan kami. Bersamanya, aku menemukan rumah untuk pulang dan satu tujuan untuk masa depan.</p>
-                        </div>
+                    <div class="story-card glass-panel">
+                        <h4>Lamaran</h4>
+                        <p class="date">29 Juni 2026</p>
+                        <p>Seiring berjalannya waktu, perasaan dan keyakinan ini tumbuh semakin kuat. Dua hati yang awalnya asing, kini menyatu dalam niat suci untuk melangkah ke jenjang yang lebih serius. Dengan izin Allah SWT serta iringan doa dari keluarga, 29 Juni 2026 menjadi saksi keseriusan kami. Bersamanya, aku menemukan rumah untuk pulang dan satu tujuan untuk masa depan.</p>
                     </div>
                 </div>
+
             </div>
         </section>
 
         <!-- 8. Wedding Gift -->
-        <section class="gift slide-up relative-section">
+        <section class="gift relative-section">
             <div class="container text-center relative-z">
-                <h2 class="section-title">Wedding Gift</h2>
-                <p>Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Namun jika Anda bermaksud memberikan tanda kasih, dapat melalui:</p>
+                <h2 class="section-title anim anim-fade">Wedding Gift</h2>
+                <p class="anim anim-up">Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Namun jika Anda bermaksud memberikan tanda kasih, dapat melalui:</p>
                 
-                <div class="bank-card slide-up">
-                    <i class="fas fa-university fa-2x gold-text slide-up"></i>
-                    <h3 class="slide-up">BRI</h3>
-                    <p id="rek-bca" class="rek-number slide-up">471301081404531</p>
-                    <p class="slide-up">a.n Malidah</p>
-                    <button class="btn-outline-gold btn-copy slide-up" onclick="copyRekening('rek-bca')">
+                <div class="bank-card anim anim-zoom glass-panel">
+                    <i class="fas fa-university fa-2x gold-text"></i>
+                    <h3 class="gold-text">BRI</h3>
+                    <p id="rek-bca" class="rek-number">471301081404531</p>
+                    <p>a.n Malidah</p>
+                    <button class="btn-outline-gold btn-copy" onclick="copyRekening('rek-bca')">
                         <i class="far fa-copy"></i> Salin Rekening
                     </button>
                 </div>
-
-               
-            <div id="toast" class="toast slide-up">Mudah-mudahan menjadi berkah ✨</div>
+            </div>
+            <div id="toast" class="toast">Mudah-mudahan menjadi berkah ✨</div>
         </section>
 
         <!-- 9. Ucapan & Doa -->
-        <section class="wishes slide-up">
+        <section class="wishes">
             <div class="container">
-                <h2 class="section-title text-center">Ucapan & Doa</h2>
-                <div class="form-wrapper">
+                <h2 class="section-title text-center anim anim-fade">Ucapan & Doa</h2>
+                <div class="form-wrapper glass-panel anim anim-up">
                     <form id="wish-form">
                         <input type="text" id="sender-name" placeholder="Nama Anda" required>
                         <textarea id="sender-msg" rows="4" placeholder="Tuliskan ucapan dan doa..." required></textarea>
                         <button type="submit" class="btn-gold w-100">Kirim Ucapan</button>
                     </form>
                     <div id="wishes-list" class="wishes-list">
-                        <div class="wish-card">
-                            <h4>Keluarga Besar</h4>
-                            <p class="time">Baru saja</p>
-                            <p>Selamat menempuh hidup baru, semoga menjadi keluarga yang sakinah, mawaddah, warahmah.</p>
-                        </div>
+                        <!-- Komentar akan dimuat otomatis di sini -->
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- 10. Penutup -->
-        <footer class="footer text-center">
+        <footer class="footer text-center anim anim-fade">
             <div class="footer-content">
                 <p>Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu.</p>
                 <p class="thank-you">Terima Kasih</p>
@@ -276,7 +269,6 @@
                 <p class="family-name">Keluarga Besar Bpk. Ahamid (Alm) & Bapak Kamaludin</p>
             </div>
 
-            <!-- IKLAN / CREDIT DEVELOPER LO -->
             <div class="developer-credit">
                 <p>POWERED BY <a href="https://www.instagram.com/aslamemwa?igsh=NnpqMGptdjNmbWVh" target="_blank">ASLAMEMWA</a></p>
             </div>
