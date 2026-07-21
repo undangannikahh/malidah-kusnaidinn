@@ -1,6 +1,9 @@
+html, body {
+    scroll-behavior: smooth;
+}
 :root {
-    --c-ivory: #F8F9FA;
     --c-white: #FFFFFF;
+    --c-ivory: #F8F9FA;
     --c-beige: #E2E6EB; 
     --c-gold: #C08588; 
     --c-gold-light: #E6D0D2; 
@@ -168,7 +171,17 @@ p { line-height: 1.6; font-size: 0.95rem; }
 /* 6. Gallery */
 .gallery { position: relative; background-color: var(--c-ivory); z-index: 1; }
 .gallery::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('bunga.png'); background-repeat: no-repeat; background-size: 800px; background-position: bottom center; opacity: 0.3; z-index: -1; pointer-events: none; }
-.gallery-scroll { display: flex; overflow-x: auto; gap: 15px; padding: 10px 5px 25px 5px; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; cursor: grab; }
+.gallery-scroll { 
+    display: flex; overflow-x: auto; gap: 15px; padding: 10px 5px 25px 5px; 
+    scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; cursor: grab; 
+    scroll-behavior: smooth; /* Tambahan biar gesernya lebih ngalir */
+}
+
+/* CLASS BARU: Mematikan efek snap pas foto ditarik biar nggak patah-patah */
+.gallery-scroll.is-dragging {
+    scroll-snap-type: none; 
+    cursor: grabbing;
+}
 .gallery-scroll::-webkit-scrollbar { height: 6px; }
 .gallery-scroll::-webkit-scrollbar-track { background: var(--c-beige); border-radius: 10px; }
 .gallery-scroll::-webkit-scrollbar-thumb { background: var(--c-gold-light); border-radius: 10px; }
