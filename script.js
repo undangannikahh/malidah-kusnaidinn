@@ -143,23 +143,37 @@ function toggleMusic() {
 let isAutoScrolling = false;
 let autoScrollInterval;
 
+// ==========================================
+// AUTO-SCROLL CROSS-BROWSER OPTIMIZATION
+// ==========================================
+let isAutoScrolling = false;
+let scrollAnimation;
+
+// Fungsi mesin penggeraknya (sync dengan refresh rate layar)
+function autoScrollStep() {
+    if (isAutoScrolling) {
+        window.scrollBy(0, 1); // Turun 1 pixel
+        scrollAnimation = requestAnimationFrame(autoScrollStep);
+    }
+}
+
 function toggleAutoScroll() {
     const btn = document.getElementById('autoscroll-control');
     
     if (isAutoScrolling) {
-        clearInterval(autoScrollInterval);
+        // Matikan scroll
+        isAutoScrolling = false;
+        cancelAnimationFrame(scrollAnimation);
         btn.innerHTML = '<i class="fas fa-play"></i> Auto Scroll';
         btn.style.background = 'var(--c-gold)';
     } else {
-        autoScrollInterval = setInterval(() => {
-            window.scrollBy(0, 1);
-        }, 20); 
+        // Nyalakan scroll
+        isAutoScrolling = true;
+        scrollAnimation = requestAnimationFrame(autoScrollStep);
         btn.innerHTML = '<i class="fas fa-pause"></i> Stop Scroll';
         btn.style.background = 'var(--c-gold-hover)';
     }
-    isAutoScrolling = !isAutoScrolling;
 }
-
 ['wheel', 'touchmove'].forEach(evt => {
     window.addEventListener(evt, () => {
         if(isAutoScrolling) toggleAutoScroll();
